@@ -1,8 +1,11 @@
-import Slider from "@/components/Slider/Slider";
+import Boxes from "@/components/Boxes/Boxes";
+import Hero from "@/components/Hero/Hero";
+
 const Home = () => {
   return (
     <>
-      <Slider />
+      <Hero />
+      <Boxes />
     </>
   );
 };

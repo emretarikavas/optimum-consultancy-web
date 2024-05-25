@@ -1,10 +1,8 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-
 import { Pagination, EffectFade, Autoplay } from "swiper/modules";
 import Image from "next/image";
 
@@ -27,6 +25,7 @@ export default function Slider() {
   return (
     <>
       <Swiper
+        className="w-full h-[300px] sm:h-[500px]"
         spaceBetween={30}
         effect={"fade"}
         loop={true}
@@ -35,18 +34,19 @@ export default function Slider() {
           bulletActiveClass: "!bg-myred !opacity-100",
         }}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination, EffectFade]}
-        className="h-full"
       >
         {Images.map((image, index) => (
-          <SwiperSlide
-            className="text-center flex justify-center items-center w-full h-full "
-            key={index}
-          >
-            <Image src={image.src} alt={image.alt} fill />
+          <SwiperSlide className="" key={index}>
+            <Image
+              className="rounded-xl"
+              src={image.src}
+              alt={image.alt}
+              fill
+            />
           </SwiperSlide>
         ))}
       </Swiper>
