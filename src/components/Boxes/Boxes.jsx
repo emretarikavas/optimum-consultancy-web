@@ -2,10 +2,77 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
-import "swiper/css/pagination";
-import { Grid, Pagination } from "swiper/modules";
+import { Grid } from "swiper/modules";
 
 const boxesInfo = [
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    src: "loremipsum",
+  },
   {
     title: "Lorem, ipsum dolor.",
     src: "loremipsum",
@@ -52,20 +119,41 @@ const Boxes = () => {
   return (
     <div className="container  sm:mx-auto">
       <Swiper
+        grid={{ rows: 2, fill: "rows" }}
         slidesPerView={3}
-        grid={{
-          rows: 2,
-        }}
         spaceBetween={30}
-        pagination={{
-          clickable: true,
+        modules={[Grid]}
+        breakpoints={{
+          0: {
+            slidesPerView: 2,
+            grid: {
+              rows: 2,
+            },
+          },
+          500: {
+            slidesPerView: 2,
+            grid: {
+              rows: 2,
+            },
+          },
+          1024: {
+            slidesPerView: 4,
+            grid: {
+              rows: 2,
+            },
+          },
+          2000: {
+            slidesPerView: 6,
+            grid: {
+              rows: 3,
+            },
+          },
         }}
-        modules={[Grid, Pagination]}
-        className="w-full h-full"
+        className="w-full h-[300px] sm:h-[300px]"
       >
         {boxesInfo.map((box, index) => (
-          <SwiperSlide key={index}>
-            <div className="bg-gray-300">
+          <SwiperSlide className="!mt-5" key={index}>
+            <div className="bg-gray-300 h-full w-full rounded-lg flex justify-center items-center">
               <p>{box.title}</p>
             </div>
           </SwiperSlide>
