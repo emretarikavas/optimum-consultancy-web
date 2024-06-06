@@ -4,7 +4,10 @@ import Boxes from "../Boxes/Boxes";
 
 const Hero = () => {
   return (
-    <div id="hero" className="flex flex-col gap-16 sm:flex-row">
+    <div
+      id="hero"
+      className="flex flex-col md:flex-row gap-4 md:gap-8 lg:gap-16"
+    >
       <Title />
       <Slider />
     </div>

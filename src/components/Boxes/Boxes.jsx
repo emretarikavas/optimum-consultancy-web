@@ -2,115 +2,40 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
+import "swiper/css/navigation";
 import { Grid } from "swiper/modules";
-
+import { Navigation } from "swiper/modules";
 const boxesInfo = [
   {
-    title: "Lorem, ipsum dolor.",
+    title: "KDV Nedir ?",
     src: "loremipsum",
   },
   {
-    title: "Lorem, ipsum dolor.",
+    title: "Cari Hesap Nedir ?",
     src: "loremipsum",
   },
   {
-    title: "Lorem, ipsum dolor.",
+    title: "Ciro Nedir ?",
     src: "loremipsum",
   },
   {
-    title: "Lorem, ipsum dolor.",
+    title: "İskonto Nedir ?",
     src: "loremipsum",
   },
   {
-    title: "Lorem, ipsum dolor.",
+    title: "Matrah Nedir ?",
     src: "loremipsum",
   },
   {
-    title: "Lorem, ipsum dolor.",
+    title: "Stopaj Nedir ?",
     src: "loremipsum",
   },
   {
-    title: "Lorem, ipsum dolor.",
+    title: "Vekaletname Nedir ?",
     src: "loremipsum",
   },
   {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
-    src: "loremipsum",
-  },
-  {
-    title: "Lorem, ipsum dolor.",
+    title: "Vergi Yükümlüsü Kimlerdir ?",
     src: "loremipsum",
   },
 ];
@@ -119,41 +44,45 @@ const Boxes = () => {
   return (
     <div className="container  sm:mx-auto">
       <Swiper
-        grid={{ rows: 2, fill: "rows" }}
         slidesPerView={3}
         spaceBetween={30}
-        modules={[Grid]}
+        modules={[Grid, Navigation]}
+        navigation={true}
         breakpoints={{
           0: {
             slidesPerView: 2,
             grid: {
-              rows: 2,
+              rows: 1,
             },
           },
           500: {
             slidesPerView: 2,
             grid: {
-              rows: 2,
+              rows: 1,
             },
           },
           1024: {
             slidesPerView: 4,
             grid: {
-              rows: 2,
+              rows: 1,
             },
           },
           2000: {
             slidesPerView: 6,
             grid: {
-              rows: 3,
+              rows: 1,
             },
           },
         }}
-        className="w-full h-[300px] sm:h-[300px]"
+        className="w-full h-[200px] "
       >
         {boxesInfo.map((box, index) => (
           <SwiperSlide className="!mt-5" key={index}>
-            <div className="bg-gray-300 h-full w-full rounded-lg flex justify-center items-center">
+            <div
+              className={`${
+                index % 2 === 0 ? "bg-myred/85" : "bg-myblue/85"
+              } h-full w-full rounded-lg flex justify-center items-center text-white`}
+            >
               <p>{box.title}</p>
             </div>
           </SwiperSlide>

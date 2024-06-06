@@ -1,10 +1,10 @@
 const Title = () => {
   return (
-    <div className="flex justify-center w-full  flex-col gap-12 ">
-      <h1 className=" text-myblue font-bold text-5xl sm:text-6xl ">
+    <div className="flex justify-center w-full  flex-col gap-12 md:gap-6 ">
+      <h1 className=" text-myblue font-bold text-5xl sm:text-6xl md:text-4xl lg:text-6xl ">
         Neden Optimum Mali Müşavirlik ?
       </h1>
-      <p className="text-xl tracking-wide">
+      <p className="text-xl md:text-lg lg:text-xl tracking-wide">
         Optimum Denetim 2011 yılında kurulmuştur. Optimum Denetim, bağımsız
         denetim, durum tespiti, şirket değerleme, muhasebe, bordrolama, mali
         müşavirlik, özel amaçlı denetim ve hukuk danışmanlığı alanlarında iç

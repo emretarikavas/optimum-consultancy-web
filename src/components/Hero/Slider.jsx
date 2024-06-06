@@ -25,7 +25,7 @@ export default function Slider() {
   return (
     <>
       <Swiper
-        className="w-full h-[300px] sm:h-[500px]"
+        className="w-full  h-[300px] sm:h-[450px] md:min-w-0 lg:h-[500px]"
         spaceBetween={30}
         effect={"fade"}
         loop={true}
