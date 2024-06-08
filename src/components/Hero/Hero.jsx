@@ -1,6 +1,6 @@
 import Slider from "./Slider";
 import Title from "./Title";
-import Boxes from "../Boxes/Boxes";
+import Boxes from "../BoxesSlider/BoxesSlider";
 
 const Hero = () => {
   return (
