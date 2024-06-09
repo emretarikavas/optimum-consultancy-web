@@ -13,13 +13,13 @@ const ListArchive = [
     metric: "Projeler",
     value: 100,
     postfix: "+",
-    icon: <FaUsers className="w-[36px] h-[36px] text-myred" />,
+    icon: <FiActivity className="w-[36px] h-[36px] text-myred" />,
   },
   {
     metric: "Kullanıcılar",
     value: 10000,
     postfix: "+",
-    icon: <FiActivity className="w-[36px] h-[36px] text-myred" />,
+    icon: <FaUsers className="w-[36px] h-[36px] text-myred" />,
   },
   {
     metric: "Müşteri Memnuniyeti",

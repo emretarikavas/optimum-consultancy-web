@@ -5,20 +5,20 @@ import { LuCalculator, LuActivitySquare, LuLineChart } from "react-icons/lu";
 const boxesInfo = [
   {
     id: 1,
-    title:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam nisi quis sapiente? Non vero earum sint, natus labore quod dolore?",
+    title: "Mali Müşavirlik Hizmeti",
+    desc: "Vergi Usul Kanunu ve Türk Ticaret Kanunu’na uyumlu olarak  defter ve belgeleriniz tanzim edilip dönem sonlarında size rapor edilir.",
     icon: <LuCalculator className="w-[36px] h-[36px] text-myred" />,
   },
   {
     id: 2,
-    title:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam nisi quis sapiente? Non vero earum sint, natus labore quod dolore?",
+    title: "Finansal Raporlama Hizmetleri",
+    desc: "Dönemsel Mali ve finansal analiz raporlarının hazırlanması ve değerlendirilmesi hizmeti.",
     icon: <LuActivitySquare className="w-[36px] h-[36px] text-myred" />,
   },
   {
     id: 3,
-    title:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis aliquid necessitatibus qui vero nihil in aut delectus? Provident, natus placeat.",
+    title: "Vergi Danışmanlığı Hizmetleri",
+    desc: "Mükelleflerin vergi, teşvik ve diğer mali avantaj ve kolaylıklardan faydalandırılmasına yönelik danışmanlık hizmetleri.",
     icon: <LuLineChart className="w-[36px] h-[36px] text-myred" />,
   },
 ];
@@ -31,9 +31,14 @@ const Boxes = () => {
           className="w-[400px] h-[200px] flex flex-col justify-center bg-white rounded-3xl   shadow-black gap-4"
           key={key}
         >
-          {box.icon}
+          <div className="flex gap-3  items-center">
+            {box.icon}
+            <h2 className="text-xl font-semibold text-myblue text-wrap text-center">
+              {box.title}
+            </h2>
+          </div>
 
-          <p>{box.title}</p>
+          <p>{box.desc}</p>
         </div>
       ))}
     </div>
